@@ -1,0 +1,16 @@
+#!/src/bin/python
+PI=3.1415926535897931159979634685441852
+n= int(raw_input('Introduce el numero de intervalos: '))
+
+suma=0
+for i in range(1,n+1):
+ x_i=(i-0.5)/float(n)
+ fx_i=4/(1+x_i**2)
+ b=i/float(n)
+ a=b-(1/float(n))
+ print'Subintervalos:[%f,%f] x_i=%f ,fx_i=%f ' % (a,b,x_i,fx_i)
+ suma=suma+fx_i
+ 
+pi=suma/n
+print'El valor de pi es= %.20f ' % pi
+print 'El valor de pi con 35 decimales es= %.35f' %PI
